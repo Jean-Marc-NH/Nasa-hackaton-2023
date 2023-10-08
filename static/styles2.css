@@ -417,8 +417,8 @@ aside#left-aside div#profile-card div#background {
     height: 54px;
     background: linear-gradient(
         90deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(9, 9, 121, 1) 100%
+        rgb(159, 114, 172) 0%,
+        #5B0888 90%
     );
 }
 
