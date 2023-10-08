@@ -19,20 +19,69 @@
     </header>
     <main>
        <div>
-            <p class="eslogan">Collaboratte to innovate: Together, Powering Research</p>
+            <h2 class="eslogan">Collaboratte to innovate: Together, Powering Research</h2>
             <form action="" method="post">
                 <input type="text" name="username" placeholder="Nombre de usuario">
                 <input type="password" name="password" placeholder="Contraseña">
-                <input type="submit" value="login">
+                <a href="">¿Olvidaste tu contraseña?</a>
+                <input type="submit" class="bt" value="login">
             </form>
-            <a href="">¿Olvidaste tu contraseña?</a>
             <a href="">¿No tienes cuenta? Registrate</a>
-            <a href="">Iniciar sesión con Google</a>
+            <a class="google bt" href="">Iniciar sesión con Google</a>
        </div>
 
-       <img src="{{ url_for('static', filename='descarga.jpg') }}" alt="">
-
+       <div>
+        <img src="{{ url_for('static', filename='descarga.jpg') }}" alt="">
+       </div>
 
     </main>
+    <section class="a">
+        <h2>Encuentra el tema que mas te guste</h2>
+        <p class="sub">Busqueda sugerida</p>
+        <div>
+            <button>AI</button>
+            <button>Web</button>
+            <button>Algoritmos</button>
+            <button>Green Computing</button>
+            <button>AI</button>
+            <button>Web</button>
+            <button>Algoritmos</button>
+            <button>Green Computing</button>
+            <button>AI</button>
+            <button>Web</button>
+            <button>Algoritmos</button>
+            <button>Green Computing</button>
+            <button>AI</button>
+            <button>Web</button>
+            <button>Algoritmos</button>
+            <button>Green Computing</button>
+        </div>
+    </section>
+    <section class="b">
+        <h2>Publica tu trabajo y encuentra colaboradores o patrocinadores</h2>
+        <img src="{{ url_for('static', filename='descarga.jpg') }}" alt="">
+    </section>
+    <section class="quien">
+        <div>
+                <h2>¿A quien se dirige?</h2>
+                <p>Cualquier persona con interes en la investigacion</p>
+                <ul>
+                    <li>Encuentra colaboradores</li>
+                    <li>Encuentra patrocinadores</li>
+                    <li>Da a conocer tu trabajo</li>
+                </ul>
+        </div>
+        <img src="{{ url_for('static', filename='descarga.jpg') }}" alt="">
+    </section>
+    <footer>
+        <p>Grupo:</p>
+        <ul>
+            <li>Jean Marc</li>
+            <li>Nikolas</li>
+            <li>Nicolas</li>
+            <li>Anali</li>
+            <li>Sergio</li>
+        </ul>
+    </footer>
 </body>
 </html>
