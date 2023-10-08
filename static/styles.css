@@ -1,0 +1,82 @@
+:root{
+    --color1: #5B0888;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+header{
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header > div{
+    display: flex;
+}
+
+header > div > a {
+    color : white;
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
+    border-right: 2px solid white;
+    padding-right: 20px;
+}
+
+header > div > section > a {
+    color : white;
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+header > img{
+    width: 80px;
+}
+
+header > div > section{
+    display: flex;
+    align-items: center;
+}
+
+
+/* -----main----- */
+
+main{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+main > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.eslogan{
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--color1);
+    font-family: 'Roboto', sans-serif;
+    width: 700px;
+}
+
+main > div > form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 10px 50px;
+    margin: 10px;
+}
