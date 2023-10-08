@@ -83,7 +83,7 @@ enable-ga="false"
                         <li>
                             <div id="right-border">
                                 <img
-                                    src="{{ url_for('static', filename='anonimo') }}"
+                                    src="{{ url_for('static', filename='tourist.jpg') }}"
                                     alt="Profile picture"
                                 />
 
@@ -123,7 +123,7 @@ enable-ga="false"
         <!-- LOADING PAGE -->
         <div id="loading-page">
             <div>
-                <img src="{{ url_for('static', filename='logoonly.png') }}" alt="" />
+                <img src="{{ url_for('static', filename='Logo_negro.png') }}" alt="" />
                 <div id="dot-loader">
                     <div class="lds-ellipsis">
                         <div></div>
@@ -145,13 +145,13 @@ enable-ga="false"
                         <div id="background"></div>
                         <div id="profile-info">
                             <img
-                                src="{{ url_for('static', filename='picture.jpeg') }}"
+                                src="{{ url_for('static', filename='tourist.jpg') }}"
                                 alt="Profile picture"
                             />
                             <strong id="profile-name"
-                                >Maurício Mendes Rossi</strong
+                                >Jean Mark Nadeau</strong
                             >
-                            <small>Front-End Developer</small>
+                            <small>Back-End Developer</small>
                         </div>
                         <div id="profile-links">
                             <a href="#">
@@ -159,24 +159,14 @@ enable-ga="false"
                                     Who's viewed your profile
                                 </span>
                                 <span class="profile-number">
-                                    102
-                                </span>
-                            </a>
-                            <a href="#">
-                                <span>
-                                    Connections
-                                </span>
-                                <span class="profile-number">
-                                    452
-                                </span>
+                                    28
                             </a>
                         </div>
-                        <span>Grow your network</span>
-                        <a href="#">
-                            <span>Access exclusive tools & insights</span>
+                        <span>Sponsored by NASA</span>
+                        <a href="https://www.google.com/search?client=opera-gx&q=translate&sourceid=opera&ie=UTF-8&oe=UTF-8">
+                            <span></span>
                             <span id="profile-premium">
-                                <span id="profile-square">■</span> Try Premium
-                                Free for 1 Month</span
+                                <span id="profile-square">■</span>¿Are you interested in NASA?</span
                             >
                         </a>
                     </div>
@@ -203,15 +193,15 @@ enable-ga="false"
                                 </li>
                                 <li>
                                     <span class="fas fa-hashtag"></span>
-                                    <span>webdevelopment</span>
+                                    <span>python development</span>
                                 </li>
                                 <li>
                                     <span class="fas fa-users"></span>
-                                    <span>Javascript Brasil</span>
+                                    <span>UCSP</span>
                                 </li>
                                 <li>
                                     <span class="fas fa-users"></span>
-                                    <span>Dog Lovers</span>
+                                    <span>IA Papers</span>
                                 </li>
                             </ul>
                         </section>
@@ -233,11 +223,11 @@ enable-ga="false"
                                 </li>
                                 <li>
                                     <span class="fas fa-users"></span>
-                                    <span>Javascript Brasil</span>
+                                    <span>UCSP</span>
                                 </li>
                                 <li>
                                     <span class="fas fa-users"></span>
-                                    <span>Dog Lovers</span>
+                                    <span>AI Papers</span>
                                 </li>
                             </ul>
                             <div class="group-list">
@@ -260,11 +250,11 @@ enable-ga="false"
                             <ul>
                                 <li>
                                     <span class="fas fa-hashtag"></span>
-                                    <span>javascript</span>
+                                    <span>AI</span>
                                 </li>
                                 <li>
                                     <span class="fas fa-hashtag"></span>
-                                    <span>webdevelopment</span>
+                                    <span>UCSP</span>
                                 </li>
                             </ul>
                             <a href="#">See all</a>
@@ -282,15 +272,17 @@ enable-ga="false"
                                 <span class="fas fa-edit"></span>
                                 <span id="btn-text">Start a post</span>
                             </button>
-                            <button id="btn-picture">
-                                <span class="fas fa-camera"></span>
-                            </button>
-                            <button id="btn-video">
-                                <span class="fas fa-video"></span>
-                            </button>
-                            <button id="btn-document">
-                                <span class="fas fa-file"></span>
-                            </button>
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <textarea id="text-input" placeholder="Escribe aquí tu publicacion."></textarea>
+                                    <h1 style="font-size: 15px;">Subir archivo PDF</h1>
+                                    <form id="upload-form" enctype="multipart/form-data">
+                                        <input type="file" id="file-input" accept=".pdf" />
+                                    </form>
+                                    <button id="save-button">Guardar</button>
+                                </div>
+                            </div>
                         </div>
                         <div id="link-box">
                             <a href="#">Write an article</a>
@@ -305,6 +297,73 @@ enable-ga="false"
                             <span class="fas fa-sort-down"></span>
                         </button>
                     </div>
+                    <article id="result" style="display: none;">
+                        <div id="post-author">
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="{{ url_for('static', filename='tourist.jpg') }}"
+                                        alt=""
+                                    />
+                                    <div>
+                                        <div>
+                                            <strong id="post-author-name"
+                                                >Nikolas Zuñiga Monroy</strong
+                                            >
+                                            <span>
+                                                <span>&nbsp;·&nbsp;</span>
+                                                1st</span
+                                            >
+                                        </div>
+                                        <span
+                                            >Back-End Developer</span
+                                        >
+                                        <span>now</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                        <div id="post-data">
+                            <p id="saved-text"></p>
+                            <p id="post-translation">
+                                <button>See translation</button>
+                            </p>
+                            <img src="{{ url_for('static', filename='pdf.webp') }}" />
+                        </div>
+                        <div id="post-interactions">
+                            <div id="interactions-amount">
+
+                                <span id="amount-info"
+                                    >0 <span>&nbsp;·&nbsp;</span> 0
+                                    Comments</span
+                                >
+                            </div>
+                            <div id="interactions-btns">
+                                <button>
+                                    <span
+                                        class="far fa-thumbs-up fa-flip-horizontal"
+                                    ></span>
+                                    <span>Like</span>
+                                </button>
+                                <button>
+                                    <span
+                                        class="far fa-comment-dots fa-flip-horizontal"
+                                    ></span>
+                                    <span>Comment</span>
+                                </button>
+                                <button>
+                                    <span class="far fa-share-square"></span>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
                     <article>
                         <div id="post-author">
                             <a href="#">
@@ -316,7 +375,7 @@ enable-ga="false"
                                     <div>
                                         <div>
                                             <strong id="post-author-name"
-                                                >Matthew James</strong
+                                                >Nikolas Zuñiga Monroy</strong
                                             >
                                             <span>
                                                 <span>&nbsp;·&nbsp;</span>
@@ -324,8 +383,7 @@ enable-ga="false"
                                             >
                                         </div>
                                         <span
-                                            >Web Developer at Muse
-                                            Software</span
+                                            >Web develover</span
                                         >
                                         <span>12h</span>
                                     </div>
@@ -387,13 +445,13 @@ enable-ga="false"
                             <a href="#">
                                 <div>
                                     <img
-                                        src="{{ url_for('static', filename='example-person3.jpeg') }}"
+                                        src="{{ url_for('static', filename='girl.jpg') }}"
                                         alt=""
                                     />
                                     <div>
                                         <div>
                                             <strong id="post-author-name"
-                                                >Alec Fisher</strong
+                                                >Anali Alejo</strong
                                             >
                                             <span>
                                                 <span>&nbsp;·&nbsp;</span>
@@ -401,8 +459,8 @@ enable-ga="false"
                                             >
                                         </div>
                                         <span>Web Designer at SL Systems</span>
-                                        <span>15h</span>
-                                    </div>
+                                        <span>16h</span>
+                                    </div>  
                                 </div>
                             </a>
                             <div>
@@ -478,10 +536,10 @@ enable-ga="false"
                         </header>
                         <div>
                             <div>
-                                <img src="{{ url_for('static', filename='mongo.jpeg') }}" alt="" />
+                                <img src="{{ url_for('static', filename='nasa.png') }}" alt="" />
                                 <div>
-                                    <strong>MongoDB</strong>
-                                    <small>Company - Computer Software</small>
+                                    <strong>NASA</strong>
+                                    <small>The National Aeronautics and Space Administration</small>
                                 </div>
                                 <button>
                                     <span class="fas fa-plus"></span>
@@ -489,9 +547,9 @@ enable-ga="false"
                                 </button>
                             </div>
                             <div>
-                                <img src="{{ url_for('static', filename='react.png') }}" alt="" />
+                                <img src="{{ url_for('static', filename='ucsp.png') }}" alt="" />
                                 <div>
-                                    <strong>#reactjs</strong>
+                                    <strong>#UCSP</strong>
                                 </div>
                                 <button>
                                     <span class="fas fa-plus"></span>
@@ -499,12 +557,11 @@ enable-ga="false"
                                 </button>
                             </div>
                             <div>
-                                <img src="{{ url_for('static', filename='example-person.jpeg') }}" alt="" />
+                                <img src="{{ url_for('static', filename='elon.jpg') }}" alt="" />
                                 <div>
-                                    <strong>John Smith</strong>
+                                    <strong>Elon Musk</strong>
                                     <small
-                                        >Entrepreneur and Marketing
-                                        Specialist</small
+                                        >The charismatic CEO of electric car maker Tesla and rocket manufacturer SpaceX.</small
                                     >
                                 </div>
                                 <button>
@@ -517,30 +574,6 @@ enable-ga="false"
                     </div>
                 </div>
                 <div id="linkedin-section">
-                    <section>
-                        <small>Ad</small>
-                        <a href="#">
-                            <span
-                                >Maurício, unlock your full potential with
-                                Linkedin Premium</span
-                            >
-                            <div>
-                                <img src="{{ url_for('static', filename='picture.jpeg') }}" alt="" />
-                                <img
-                                    id="linkedin-key"
-                                    src="{{ url_for('static', filename='linkedin-ad.png') }}"
-                                    alt=""
-                                />
-                            </div>
-                            <strong>
-                                See who's viewed your profile in the last 90
-                                days
-                            </strong>
-                            <div>
-                                <button>Try for free</button>
-                            </div>
-                        </a>
-                    </section>
                     <footer>
                         <ul>
                             <li>About</li>

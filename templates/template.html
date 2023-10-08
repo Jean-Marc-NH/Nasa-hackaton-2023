@@ -45,7 +45,7 @@
                         <div id="home">
                             <span></span>
                             <span class="fas fa-home" aria-hidden="true"></span>
-                            <a href="index.html">Home</a>
+                            <a href="main-page">Home</a>
                         </div>
                     </li>
                     <li>
@@ -68,7 +68,7 @@
                     </li>
                     <li>
                         <div class="selected"id="right-border">
-                            <img src="{{ url_for('static', filename='anonimo.png') }}" alt="Profile picture">
+                            <img src="{{ url_for('static', filename='tourist.jpg') }}" alt="Profile picture">
 
                             <span class="nav-item-text">    
                                 <a href="perfil.html">Me</a>
@@ -83,54 +83,55 @@
     <div class="column">
         <div class="perfil-container">
             <div class="header">
-                <img src="ruta_a_tu_imagen.jpg" alt="Foto de perfil">
+                <img src="{{ url_for('static', filename='tourist.jpg') }}" alt="Foto de perfil"/>
                 <div class="header-info">
-                    <div class="nombre">Juan Pérez</div>
-                    <div class="profesion">Desarrollador Web</div>
+                    <div class="nombre">Jean Mark Nadeau</div>
+                    <div class="profesion">Back-End Developer</div>
                 </div>
             </div>
-            <button id="editarBtn" class="boton">Modificar perfil</button>
+            <button id="editarBtn" class="boton">Modify profile</button>
                 <div class="boton none" id="editarForm">
                     <form action="" method="">
-                        <label for="nombre">Nombre:</label>
+                        <label for="nombre">Name: </label>
                         <input type="text" id="nombre" name="nombre" value="Juan Pérez">
-                        <label for="profesion">Profesión:</label>
+                        <label for="profesion">Profession:</label>
                         <input type="text" id="profesion" name="profesion" value="Desarrollador Web">
                         <!-- Puedes agregar más campos según lo necesario -->
-                        <input type="submit" value="Guardar cambios">
+                        <input type="submit" value="Save Changes">
                     </form>
                 </div>
             <div class="resumen bloque">
-                <h2>Resumen</h2>
-                <p>Desarrollador web con más de 5 años de experiencia en tecnologías como HTML, CSS y JavaScript. Apasionado por la creación de soluciones innovadoras y la mejora continua.</p>
+                <h2>Summary</h2>
+                <p>Web developer with more than 5 years of experience in technologies such as HTML, CSS and JavaScript. Passionate about creating innovative solutions and continuous improvement.</p>
             </div>
             <div class="experiencia bloque">
-                <h2>Experiencia Laboral</h2>
+                <h2>Work experience</h2>
                 <div class="item">
-                    <h3>Desarrollador Web Senior</h3>
-                    <span>Empresa XYZ - 2021 - Presente</span>
-                    <p>Responsable de liderar proyectos web y coordinar equipos de desarrollo.</p>
+                    <h3>Senior Web Developer</h3>
+                    <span>Company XYZ - 2021 - Present</span>
+                    <p>Responsible for leading web projects and coordinating development teams.</p>
                 </div>
                 <div class="item">
-                    <h3>Desarrollador Web Junior</h3>
-                    <span>Empresa ABC - 2018 - 2021</span>
-                    <p>Desarrollo y mantenimiento de aplicaciones web para clientes internacionales.</p>
+                    <h3>Junior Web Developer</h3>
+                    <span>ABC Company - 2018 - 2021</span>
+                    <p>Development and maintenance of web applications for international clients.</p>
                 </div>
             </div>
             <div class="educacion bloque">
-                <h2>Educación</h2>
+                <h2>Education</h2>
                 <div class="item">
-                    <h3>Licenciatura en Informática</h3>
-                    <span>Universidad de la Ciudad - 2014 - 2018</span>
+                    <h3>Bachelor of Computer ScienceBachelor of Computer Science</h3>
+                    <span>City University - 2014 - 2018</span>
                 </div>
             </div>
             <div class="habilidades bloque ">
-                <h2>Habilidades</h2>
+                <h2>
+                    Skills</h2>
                 <ul class="puntos">
-                    <li>HTML, CSS y JavaScript</li>
-                    <li>React y Vue.js</li>
-                    <li>Desarrollo Backend con Node.js</li>
-                    <li>Base de datos SQL y NoSQL</li>
+                    <li>HTML, CSS and JavaScript</li>
+                    <li>React and Vue.js</li>
+                    <li>Backend development with Node.js</li>
+                    <li>SQL and NoSQL database</li>
                 </ul>
             </div>
             
@@ -139,10 +140,10 @@
             <div class="publicaciones-container">
                 
                 
-                <button id="publicarBtn" class="boton">Nueva Publicación</button>
+                <button id="publicarBtn" class="boton">New Publication</button>
                 <div class="boton none" id="publicarForm">
                     <form action="" method="post">
-                        <textarea name="contenido" rows="4" placeholder="¿Qué quieres compartir?"></textarea>
+                        <textarea name="contenido" rows="4" placeholder="What do you want to share?"></textarea>
                         <input type="submit" value="Publicar">
                         <div id="share-box">
                             <div id="button-box">
@@ -161,12 +162,12 @@
                 </div>
                 <!-- Ejemplo de publicaciones existentes -->
                 <div class="publicacion">
-                    <p>¡Acabo de completar un nuevo proyecto web! Estoy emocionado por compartirlo con todos ustedes.</p>
-                    <span>Publicado el 5 de octubre de 2023</span>
+                    <p>I just completed a new web project! I'm excited to share it with all of you.</p>
+                    <span>Published on October 5, 2023</span>
                 </div>
                 <div class="publicacion">
-                    <p>Participaré en una conferencia de desarrollo web la próxima semana. ¿Alguien más asistirá?</p>
-                    <span>Publicado el 1 de octubre de 2023</span>
+                    <p>I'll be participating in a web development conference next week. Will anyone else attend?</p>
+                    <span>Published on October 1, 2023</span>
                 </div>
             </div>
         </div>
@@ -182,32 +183,32 @@
     </div>
     
     <div class="sidebar">
-        <h2>Contactos Sugeridos</h2>
+        <h2>Suggested Contacts</h2>
         <div class="contacto">
-            <img src="ruta_a_imagen_contacto1.jpg" alt="Foto de contacto 1">
+            <img src="{{ url_for('static', filename='girl.jpg') }}" alt="Foto de contacto 1"/>
             <div class="contacto-info">
                 <span class="nav-item-text">    
                     <a href="perfil.html">Maria López</a>
                 </span>
-                <span>Diseñadora Gráfica</span>
+                <span>Graphic Designer</span>
             </div>
         </div>
         <div class="contacto">
-            <img src="ruta_a_imagen_contacto2.jpg" alt="Foto de contacto 2">
+            <img src="{{ url_for('static', filename='man.jpg') }}" alt="Foto de contacto 2"/>
             <div class="contacto-info">
                 <span class="nav-item-text">    
                     <a href="perfil.html">Carlos Rodríguez</a>
                 </span>
-                <span>Analista de Marketing</span>
+                <span>Marketing analyst</span>
             </div>
         </div>
         <div class="contacto">
-            <img src="ruta_a_imagen_contacto3.jpg" alt="Foto de contacto 3">
+            <img src="{{ url_for('static', filename='girl_2.jpg') }}" alt="Foto de contacto 3"/>
             <div class="contacto-info">
                 <span class="nav-item-text">    
                     <a href="perfil.html">Laura Martinez</a>
                 </span>
-                <span>Desarrolladora Front end</span>
+                <span>Front end developer</span>
             </div>
         </div>
     </div>

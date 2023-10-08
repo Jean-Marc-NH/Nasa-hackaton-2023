@@ -14,6 +14,38 @@ function toggleSearchInput() {
     }
 }
 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const openModalButton = document.getElementById('btn-post');
+    const modal = document.getElementById('modal');
+    const closeModal = document.getElementsByClassName('close')[0];
+    const textInput = document.getElementById('text-input');
+    const saveButton = document.getElementById('save-button');
+    const resultDiv = document.getElementById('result');
+    const savedText = document.getElementById('saved-text');
+
+    let savedTextValue = ""; // Variable para guardar el texto
+
+    openModalButton.addEventListener('click', function () {
+        modal.style.display = 'block';
+    });
+
+    closeModal.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    saveButton.addEventListener('click', function () {
+        savedTextValue = textInput.value; // Guardar el texto en la variable
+        savedText.textContent = savedTextValue; // Mostrar el texto en el HTML
+        resultDiv.style.display = 'block'; // Mostrar el resultado
+        modal.style.display = 'none';
+    });
+});
+
+
+
+
 function showProfileGroupIcon(element) {
     const [icon] = element.querySelectorAll("span.fas");
 

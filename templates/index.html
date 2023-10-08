@@ -3,85 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>---</title>
 </head>
 <body>
-    <header>
-        <img src="{{ url_for('static', filename='CoLiink.png') }}" alt="logo">
+    <header class="barra1" >
+        <img alt="logo" class="icono" src="{{ url_for('static', filename='CoLiink.png') }}"/>
         <div>
             <a href="">Papers</a>
             <section>
-                <a href="">Sing up</a>
-                <a href="">Longin</a>
+                <a href="">Sign up</a>
+                <a href="">Login</a>
             </section>
-        </div>
+        </div>  
     </header>
     <main>
-       <div>
-            <h2 class="eslogan">Collaboratte to innovate: Together, Powering Research</h2>
-            <form action="" method="post">
-                <input type="text" name="username" placeholder="Nombre de usuario">
-                <input type="password" name="password" placeholder="Contraseña">
-                <a href="">¿Olvidaste tu contraseña?</a>
-                <a href="main-page" class="btn google">LogIn</a>
-            </form>
-            <a href="">¿No tienes cuenta? Registrate</a>
-            <a class="google bt" href="">Iniciar sesión con Google</a>
-       </div>
+            <div class="form-information">
+                <div class="form-information-childs">
+                    <h2>Log In</h2> 
+                    <div class="icons">
+                        <i class="fa fa-google" aria-hidden="true"></i>
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+    
+                    </div>
+                    <p>Login with another account</p>
+                    <form class="form">
+                        <label>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <input type="email" placeholder="Mail">
+                        </label>
+                        <label>
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <input type="password" placeholder="Password">
+                        </label>
+                        <div class="ini">
+                            <a href="main-page" class="btn google">LogIn</a>
+                        </div>
+                       
+    
+                    </form>
+                </div>
+            </div>
+    
+        </div>
 
        <div>
-        <img src="{{ url_for('static', filename='descarga.jpg') }}" alt="">
+        <img src="{{ url_for('static', filename='Logo_negro.png') }}" alt=""> 
        </div>
 
     </main>
-    <section class="a">
-        <h2>Encuentra el tema que mas te guste</h2>
-        <p class="sub">Busqueda sugerida</p>
+    <section class="a barras">
+        <h2>Discover the subject you enjoy the most!</h2>
+        <p class="sub">Suggested search</p>
         <div>
             <button>AI</button>
             <button>Web</button>
-            <button>Algoritmos</button>
+            <button>Algorithms</button>
             <button>Green Computing</button>
-            <button>AI</button>
-            <button>Web</button>
-            <button>Algoritmos</button>
-            <button>Green Computing</button>
-            <button>AI</button>
-            <button>Web</button>
-            <button>Algoritmos</button>
-            <button>Green Computing</button>
-            <button>AI</button>
-            <button>Web</button>
-            <button>Algoritmos</button>
-            <button>Green Computing</button>
+            <button>Philosophy</button>
+            <button>Machine Learning</button>
+            <button>IOT</button>
+            <button>Informática</button>
+            <button>Cybersecurity</button>
+            <button>Quantum physics</button>
+            <button>Smart cities</button>
+            <button>Art</button>
+            <button>Medicine</button>
+            <button>Renewable energy</button>
+            <button>Cryptography </button>
+            <button>Neuroscience</button>
         </div>
     </section>
-    <section class="b">
-        <h2>Publica tu trabajo y encuentra colaboradores o patrocinadores</h2>
-        <img src="{{ url_for('static', filename='descarga.jpg') }}" alt="">
-    </section>
+    <section class="b barras">
+        <h2>Publish your work and find collaborators or sponsors!</h2>
+        <img class="img_colink" src="{{ url_for('static', filename='CoLiink.png') }}" alt=""> 
+    </section>  
     <section class="quien">
         <div>
-                <h2>¿A quien se dirige?</h2>
-                <p>Cualquier persona con interes en la investigacion</p>
-                <ul>
-                    <li>Encuentra colaboradores</li>
-                    <li>Encuentra patrocinadores</li>
-                    <li>Da a conocer tu trabajo</li>
-                </ul>
+                <h2>Who is it addressed to?</h2>
+                <p>Anyone with an interest in research.</p>
+                <div class="form-information">
+                    <div class="form-information-childs">                        
+                        <li>Promote your work.</li>
+                    </div>
+                </div>
+                <div class="form-information">
+                    <div class="form-information-childs">
+                
+                        <li>Find sponsors!</li>
+                        
+                    </div>
+                </div>
         </div>
-        <img src="{{ url_for('static', filename='descarga.jpg') }}" alt="">
+        <img class="img_anonimous" src="{{ url_for('static', filename='anonimo.png') }}" alt=""> 
     </section>
-    <footer>
-        <p>Grupo:</p>
-        <ul>
-            <li>Jean Marc</li>
-            <li>Nikolas</li>
-            <li>Nicolas</li>
-            <li>Anali</li>
-            <li>Sergio</li>
-        </ul>
-    </footer>
+    <footer class="barra2">
+            <p>CodenHeimers |  2023</p>
+    </footer>    
 </body>
 </html>
